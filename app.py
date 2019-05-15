@@ -20,6 +20,11 @@ app.layout = html.Div([
         options=[{'label': i, 'value': i} for i in ['toally new', 'totesnew', 'third_new']],
         value='totesnew'
     ),
+     dcc.Dropdown2(
+        id='dropdown',
+        options=[{'label': i, 'value': i} for i in ['toally new', 'totesnew', 'third_new']],
+        value='totesnew'
+    ),
     html.Div(id='display-value')
 ])
 
@@ -27,6 +32,11 @@ app.layout = html.Div([
 ######### Interactive callbacks go here #########
 @app.callback(dash.dependencies.Output('display-value', 'children'),
               [dash.dependencies.Input('dropdown', 'value')])
+def display_value(value):
+    return 'this is my new string "{}"'.format(value)
+
+@app.callback(dash.dependencies.Output('display-value', 'children'),
+              [dash.dependencies.Input('dropdown2', 'value')])
 def display_value(value):
     return 'this is my new string "{}"'.format(value)
 
