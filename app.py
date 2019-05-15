@@ -14,11 +14,11 @@ app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"
 
 ####### Layout of the app ########
 app.layout = html.Div([
-    html.H2('Chuck Norris execution method'),
+    html.H2('Totally New Title'),
     dcc.Dropdown(
         id='dropdown',
-        options=[{'label': i, 'value': i} for i in ['round-house kick to the face', 'punch', 'body-slam']],
-        value='punch'
+        options=[{'label': i, 'value': i} for i in ['toally new', 'totesnew', 'third_new']],
+        value='totesnew'
     ),
     html.Div(id='display-value')
 ])
@@ -28,7 +28,7 @@ app.layout = html.Div([
 @app.callback(dash.dependencies.Output('display-value', 'children'),
               [dash.dependencies.Input('dropdown', 'value')])
 def display_value(value):
-    return 'Chuck Norris will execute by "{}"'.format(value)
+    return 'this is my new string "{}"'.format(value)
 
 
 ######### Run the app #########
