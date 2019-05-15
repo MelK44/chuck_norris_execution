@@ -22,13 +22,6 @@ app.layout = html.Div([
     ),
     html.Div(id='display-value')
 ])
-   dcc.Dropdown(
-        id='dropdown',
-        options=[{'label': i, 'value': i} for i in ['toally new', 'totesnew', 'third_new']],
-        value='totesnew'
-    ),
-    html.Div(id='display-value')
-])
 
 
 ######### Interactive callbacks go here #########
