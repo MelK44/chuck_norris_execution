@@ -20,8 +20,8 @@ app.layout = html.Div([
         options=[{'label': i, 'value': i} for i in ['toally new', 'totesnew', 'third_new']],
         value='totesnew'
     ),
-     dcc.Dropdown2(
-        id='dropdown',
+     dcc.Dropdown(
+        id='dropdown2',
         options=[{'label': i, 'value': i} for i in ['toally new', 'totesnew', 'third_new']],
         value='totesnew'
     ),
